@@ -10,7 +10,6 @@
 		D819DB832AFAB77F0054F7D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D819DB822AFAB77F0054F7D7 /* AppDelegate.swift */; };
 		D819DB852AFAB77F0054F7D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D819DB842AFAB77F0054F7D7 /* SceneDelegate.swift */; };
 		D819DB872AFAB77F0054F7D7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D819DB862AFAB77F0054F7D7 /* ViewController.swift */; };
-		D819DB8A2AFAB77F0054F7D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D819DB882AFAB77F0054F7D7 /* Main.storyboard */; };
 		D819DB8C2AFAB7800054F7D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D819DB8B2AFAB7800054F7D7 /* Assets.xcassets */; };
 		D819DB8F2AFAB7800054F7D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D819DB8D2AFAB7800054F7D7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		D819DB822AFAB77F0054F7D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D819DB842AFAB77F0054F7D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D819DB862AFAB77F0054F7D7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D819DB892AFAB77F0054F7D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D819DB8B2AFAB7800054F7D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D819DB8E2AFAB7800054F7D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D819DB902AFAB7800054F7D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 				D819DB9C2AFABD9C0054F7D7 /* Controllers */,
 				D819DB9B2AFABD940054F7D7 /* Views */,
 				D819DB9A2AFABD770054F7D7 /* Assets */,
-				D819DB882AFAB77F0054F7D7 /* Main.storyboard */,
 			);
 			path = "START-HW14-Arken";
 			sourceTree = "<group>";
@@ -159,7 +156,6 @@
 			files = (
 				D819DB8F2AFAB7800054F7D7 /* LaunchScreen.storyboard in Resources */,
 				D819DB8C2AFAB7800054F7D7 /* Assets.xcassets in Resources */,
-				D819DB8A2AFAB77F0054F7D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D819DB882AFAB77F0054F7D7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D819DB892AFAB77F0054F7D7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D819DB8D2AFAB7800054F7D7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
