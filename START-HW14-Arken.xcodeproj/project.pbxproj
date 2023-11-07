@@ -56,15 +56,47 @@
 		D819DB812AFAB77F0054F7D7 /* START-HW14-Arken */ = {
 			isa = PBXGroup;
 			children = (
-				D819DB822AFAB77F0054F7D7 /* AppDelegate.swift */,
-				D819DB842AFAB77F0054F7D7 /* SceneDelegate.swift */,
-				D819DB862AFAB77F0054F7D7 /* ViewController.swift */,
+				D819DB9D2AFABDA80054F7D7 /* AppDelegates */,
+				D819DB9C2AFABD9C0054F7D7 /* Controllers */,
+				D819DB9B2AFABD940054F7D7 /* Views */,
+				D819DB9A2AFABD770054F7D7 /* Assets */,
 				D819DB882AFAB77F0054F7D7 /* Main.storyboard */,
-				D819DB8B2AFAB7800054F7D7 /* Assets.xcassets */,
-				D819DB8D2AFAB7800054F7D7 /* LaunchScreen.storyboard */,
-				D819DB902AFAB7800054F7D7 /* Info.plist */,
 			);
 			path = "START-HW14-Arken";
+			sourceTree = "<group>";
+		};
+		D819DB9A2AFABD770054F7D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D819DB8B2AFAB7800054F7D7 /* Assets.xcassets */,
+				D819DB902AFAB7800054F7D7 /* Info.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		D819DB9B2AFABD940054F7D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D819DB8D2AFAB7800054F7D7 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D819DB9C2AFABD9C0054F7D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D819DB862AFAB77F0054F7D7 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D819DB9D2AFABDA80054F7D7 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				D819DB822AFAB77F0054F7D7 /* AppDelegate.swift */,
+				D819DB842AFAB77F0054F7D7 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +320,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "START-HW14-Arken/Info.plist";
+				INFOPLIST_FILE = "START-HW14-Arken/Assets/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,10 +347,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "START-HW14-Arken/Info.plist";
+				INFOPLIST_FILE = "START-HW14-Arken/Assets/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
