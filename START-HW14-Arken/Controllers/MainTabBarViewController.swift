@@ -22,7 +22,7 @@ class MainTabBarViewController: UITabBarController {
                                                       title: "Albums", image: "rectangle.stack.fill")
         let searchNavController = configureTabBarItem(viewController: SearchViewController(),
                                                       title: "Search", image: "magnifyingglass")
-        viewControllers = [libaryNavController, forYouNavController, albumsNavController, searchNavController]
+        viewControllers = [albumsNavController, libaryNavController, forYouNavController, searchNavController]
     }
     
     private func configureTabBarItem(viewController: UIViewController, title: String, image: String) -> UINavigationController {
