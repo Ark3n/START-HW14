@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LibaryViewController: UIViewController {
+final class LibaryViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

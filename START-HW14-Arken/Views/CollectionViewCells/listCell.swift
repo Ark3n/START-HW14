@@ -7,7 +7,8 @@
 import UIKit
 import SnapKit
 
-class ListCell: UICollectionViewCell {
+final class ListCell: UICollectionViewCell {
+    
     // MARK: - Properties
     static let identifier = "list"
     private lazy var photoImageView: UIImageView = {

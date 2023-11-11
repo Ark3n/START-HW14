@@ -42,6 +42,8 @@ extension AlbumsGroup {
         let photos = [
             Photo(image: "1", title: "People", count: "3500"),
             Photo(image: "2", title: "Places", count: "56"),
+            Photo(image: "1", title: "People", count: "3500"),
+            Photo(image: "2", title: "Places", count: "56")
         ]
         let count  = String(photos.count)
         return AlbumsGroup(title: "People&Places", count: count, albums: photos)
