@@ -7,27 +7,17 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
+
 class AlbumsViewController: UIViewController {
-    enum Section: Int, CaseIterable {
-        case myAlbums, PeopleAndPlace, MediaTypes
-        var columCount: Int {
-            switch self {
-            case .myAlbums:
-                return 2
-            case .PeopleAndPlace:
-                return 1
-            case .MediaTypes:
-                return 1
-            }
-        }
-    }
     // MARK: - Properties
+    
+    var albums = AlbumsGroup.allGroups()
     private lazy var collectionView: UICollectionView = {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(myAlmubsCollectionViewCell.self, forCellWithReuseIdentifier: myAlmubsCollectionViewCell.identifier)
         collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(CompasitionalCell.self, forCellWithReuseIdentifier: CompasitionalCell.identifier)
         return collectionView
     }()
     // MARK: - View LifeCycle
@@ -48,8 +38,10 @@ class AlbumsViewController: UIViewController {
             make.edges.equalToSuperview()
         }
     }
-    
+
     // MARK: - Create Compositional Layout
+    
+    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, _ in
             switch sectionIndex {
@@ -94,33 +86,35 @@ class AlbumsViewController: UIViewController {
     }
 }
 
-// MARK: - UIcollectionView Delegates and Datasources
-extension AlbumsViewController: UICollectionViewDelegate {
-    
-}
-
 extension AlbumsViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        3
+        albums.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 7
-        case 1:
-            return 10
-        default:
-            return 8
-        }
+        albums[section].photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompasitionalCell.identifier, for: indexPath)
-        cell.backgroundColor = .green
+        let album = albums[indexPath.section].photos[indexPath.row]
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: myAlmubsCollectionViewCell.identifier, for: indexPath) as? myAlmubsCollectionViewCell else { return UICollectionViewCell()}
+        cell.configureCell(photo: album.image, title: albums[indexPath.section].title, count: albums[indexPath.section].count)
         return cell
+    }
+    
+    
+}
+// MARK: - SwiftUI
+struct Provider: PreviewProvider {
+    static var previews: some View {
+        ContainerView().edgesIgnoringSafeArea(.all)
+    }
+    struct ContainerView: UIViewControllerRepresentable {
+        
+        func makeUIViewController(context: Context) -> some UIViewController {
+            AlbumsViewController()
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        }
     }
 }
 
-extension AlbumsViewController: UICollectionViewDelegateFlowLayout {
-    
-}

@@ -16,9 +16,9 @@
 		D8CBE5E12AFB7F6E0002D304 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE5E02AFB7F6E0002D304 /* ForYouViewController.swift */; };
 		D8CBE5E32AFB7F7A0002D304 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE5E22AFB7F7A0002D304 /* AlbumsViewController.swift */; };
 		D8CBE5E52AFB7F850002D304 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE5E42AFB7F850002D304 /* SearchViewController.swift */; };
-		D8CBE5E72AFBA7940002D304 /* CompasitionalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE5E62AFBA7940002D304 /* CompasitionalCell.swift */; };
 		D8CBE5EA2AFBA86B0002D304 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D8CBE5E92AFBA86B0002D304 /* SnapKit */; };
 		D8CBE5EE2AFCAFF00002D304 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE5ED2AFCAFF00002D304 /* Model.swift */; };
+		D8CBE6122AFF8F100002D304 /* myAlmubsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6112AFF8F100002D304 /* myAlmubsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		D8CBE5E02AFB7F6E0002D304 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
 		D8CBE5E22AFB7F7A0002D304 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		D8CBE5E42AFB7F850002D304 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		D8CBE5E62AFBA7940002D304 /* CompasitionalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompasitionalCell.swift; sourceTree = "<group>"; };
 		D8CBE5ED2AFCAFF00002D304 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D8CBE6112AFF8F100002D304 /* myAlmubsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAlmubsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +89,8 @@
 		D819DB9B2AFABD940054F7D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D8CBE60F2AFF8E6F0002D304 /* CollectionViewCells */,
 				D819DB8D2AFAB7800054F7D7 /* LaunchScreen.storyboard */,
-				D8CBE5E62AFBA7940002D304 /* CompasitionalCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +122,14 @@
 				D8CBE5ED2AFCAFF00002D304 /* Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D8CBE60F2AFF8E6F0002D304 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D8CBE6112AFF8F100002D304 /* myAlmubsCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,13 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CBE6122AFF8F100002D304 /* myAlmubsCollectionViewCell.swift in Sources */,
 				D8CBE5EE2AFCAFF00002D304 /* Model.swift in Sources */,
 				D819DB872AFAB77F0054F7D7 /* MainTabBarViewController.swift in Sources */,
 				D8CBE5E52AFB7F850002D304 /* SearchViewController.swift in Sources */,
 				D819DB832AFAB77F0054F7D7 /* AppDelegate.swift in Sources */,
 				D8CBE5E32AFB7F7A0002D304 /* AlbumsViewController.swift in Sources */,
 				D819DB852AFAB77F0054F7D7 /* SceneDelegate.swift in Sources */,
-				D8CBE5E72AFBA7940002D304 /* CompasitionalCell.swift in Sources */,
 				D8CBE5E12AFB7F6E0002D304 /* ForYouViewController.swift in Sources */,
 				D8CBE5DF2AFB7F610002D304 /* LibaryViewController.swift in Sources */,
 			);
