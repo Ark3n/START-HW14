@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class myAlmubsCollectionViewCell: UICollectionViewCell {
+class GirdCell: UICollectionViewCell {
     // MARK: - Properties
     static let identifier = "my-albums"
     private lazy var photoImageView: UIImageView = {

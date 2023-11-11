@@ -16,7 +16,8 @@ class AlbumsViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = createLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(myAlmubsCollectionViewCell.self, forCellWithReuseIdentifier: myAlmubsCollectionViewCell.identifier)
+        collectionView.register(GirdCell.self, forCellWithReuseIdentifier: GirdCell.identifier)
+        collectionView.register(ListCell.self, forCellWithReuseIdentifier: ListCell.identifier)
         collectionView.dataSource = self
         return collectionView
     }()
@@ -57,6 +58,7 @@ class AlbumsViewController: UIViewController {
                 layouSection.contentInsets = NSDirectionalEdgeInsets(top:10, leading: 20, bottom: 0, trailing: 0)
                 layouSection.orthogonalScrollingBehavior = .groupPaging
                 return layouSection
+                
             case 1:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
                 let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -69,17 +71,18 @@ class AlbumsViewController: UIViewController {
                 layouSection.contentInsets = NSDirectionalEdgeInsets(top:10, leading: 20, bottom: 0, trailing: 0)
                 layouSection.orthogonalScrollingBehavior = .groupPaging
                 return layouSection
-            default:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(0.1))
-                let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 20, bottom: 5, trailing: 10)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
+            default:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
+                let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+                layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10)
+                
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
                 let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 10)
                 
                 let layouSection = NSCollectionLayoutSection(group: layoutGroup)
                 layouSection.contentInsets = NSDirectionalEdgeInsets(top:10, leading: 5, bottom: 0, trailing: 5)
-                layouSection.orthogonalScrollingBehavior = .groupPagingCentered
+                layouSection.orthogonalScrollingBehavior = .groupPaging
                 return layouSection
             }
         }
@@ -91,17 +94,23 @@ extension AlbumsViewController: UICollectionViewDataSource {
         albums.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        albums[section].photos.count
+        albums[section].albums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let album = albums[indexPath.section].photos[indexPath.row]
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: myAlmubsCollectionViewCell.identifier, for: indexPath) as? myAlmubsCollectionViewCell else { return UICollectionViewCell()}
-        cell.configureCell(photo: album.image, title: albums[indexPath.section].title, count: albums[indexPath.section].count)
-        return cell
+        let album = albums[indexPath.section].albums[indexPath.row]
+        switch indexPath.section {
+        case 0, 1:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GirdCell.identifier, for: indexPath) as? GirdCell else { return UICollectionViewCell()}
+            cell.configureCell(photo: album.image, title: album.title, count: album.count)
+            return cell
+        default:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ListCell.identifier, for: indexPath) as? ListCell else { return UICollectionViewCell()}
+            cell.configureCell(photo: album.image, title: album.title, count: album.count)
+            return cell
+
+        }
     }
-    
-    
 }
 // MARK: - SwiftUI
 struct Provider: PreviewProvider {
