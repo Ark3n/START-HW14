@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForYouViewController: UIViewController {
+final class ForYouViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

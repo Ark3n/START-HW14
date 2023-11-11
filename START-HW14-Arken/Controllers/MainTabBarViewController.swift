@@ -7,12 +7,15 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+final class MainTabBarViewController: UITabBarController {
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
     }
+    
+    // MARK: - Setup Tabbar
     private func setupTabBar() {
         let libaryNavController = configureTabBarItem(viewController: LibaryViewController(),
                                          title: "Libary", image: "photo.on.rectangle")
