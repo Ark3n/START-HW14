@@ -145,8 +145,10 @@ extension AlbumsViewController: UICollectionViewDataSource {
 extension AlbumsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let photos = albums[indexPath.section].albums[indexPath.row].photos
+        let title = albums[indexPath.section].albums[indexPath.row].title
         collectionView.deselectItem(at: indexPath, animated: true)
-        let detailVC = DetailsViewController()
+        let detailVC = AlbumViewController()
+        detailVC.title = title
         detailVC.album = photos
         navigationController?.pushViewController(detailVC, animated: true)
     }
