@@ -65,7 +65,7 @@ final class PeopleCell: UICollectionViewCell {
     private lazy var labelsStackView: UIStackView = {
        let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .center
+        stackView.alignment = .leading
         return stackView
     }()
     let width: CGFloat = 72

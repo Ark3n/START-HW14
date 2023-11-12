@@ -53,8 +53,14 @@ extension AlbumsGroup {
     static func getMediaTypes() -> AlbumsGroup {
         let mediaTypes = [
             Album(image: "video", title: "Videos", photos: ["1", "2", "3", "4"]),
-            Album(image: "person.crop.rectangle", title: "Selfies", photos: ["1", "2", "3", "4"]),
-            Album(image: "smallcircle.circle", title: "Live Photos",  photos: ["1", "2", "3", "4"])
+            Album(image: "person.crop.rectangle", title: "Selfies", photos: ["1", "2", "3", "4", "2", "3", "4"]),
+            Album(image: "smallcircle.circle", title: "Live Photos",  photos: ["1", "2", "3", "4", "4", "2", "3"]),
+            Album(image: "cube", title: "Portrait", photos: ["1", "2", "3", "4", "4", "2", "3"]),
+            Album(image: "rectangle", title: "Ponoramas", photos: ["1", "2", "3", "4", "2", "3"]),
+            Album(image: "video.and.waveform", title: "Cinimatic",  photos: ["1", "2", "3", "4", "1", "2", "3", "4"]),
+            Album(image: "camera.viewfinder", title: "Screenshots", photos: ["1", "2", "3", "4", "3", "4"]),
+            Album(image: "smallcircle.circle", title: "Screen Recordings", photos: ["1", "2", "3", "4"]),
+            Album(image: "smallcircle.circle", title: "Animated",  photos: ["1", "2", "3", "4", "1", "2", "3"])
         ]
         let count = String(mediaTypes.count)
         return AlbumsGroup(title: "Media Types", count: count, albums: mediaTypes)
