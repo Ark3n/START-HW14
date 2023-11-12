@@ -22,6 +22,8 @@
 		D8CBE6342AFFCED50002D304 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6332AFFCED50002D304 /* listCell.swift */; };
 		D8CBE6372AFFDEB60002D304 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */; };
 		D8CBE6392B00B0EC0002D304 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */; };
+		D8CBE63B2B00DC6F0002D304 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE63A2B00DC6F0002D304 /* DetailsViewController.swift */; };
+		D8CBE63D2B00E0380002D304 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE63C2B00E0380002D304 /* DetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		D8CBE6332AFFCED50002D304 /* listCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
+		D8CBE63A2B00DC6F0002D304 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		D8CBE63C2B00E0380002D304 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				D8CBE5E02AFB7F6E0002D304 /* ForYouViewController.swift */,
 				D8CBE5E22AFB7F7A0002D304 /* AlbumsViewController.swift */,
 				D8CBE5E42AFB7F850002D304 /* SearchViewController.swift */,
+				D8CBE63A2B00DC6F0002D304 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				D8CBE6332AFFCED50002D304 /* listCell.swift */,
 				D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */,
 				D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */,
+				D8CBE63C2B00E0380002D304 /* DetailCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -228,6 +234,8 @@
 				D8CBE6392B00B0EC0002D304 /* PeopleCell.swift in Sources */,
 				D8CBE5E12AFB7F6E0002D304 /* ForYouViewController.swift in Sources */,
 				D8CBE6372AFFDEB60002D304 /* HeaderCell.swift in Sources */,
+				D8CBE63B2B00DC6F0002D304 /* DetailsViewController.swift in Sources */,
+				D8CBE63D2B00E0380002D304 /* DetailCell.swift in Sources */,
 				D8CBE5DF2AFB7F610002D304 /* LibaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
