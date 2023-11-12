@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DetailsViewController: UIViewController {
+final class AlbumViewController: UIViewController {
     
     // MARK: - Properties
     var album: [String] = []
@@ -38,7 +38,7 @@ final class DetailsViewController: UIViewController {
 }
 
 // MARK: - CollectionView Datasource
-extension DetailsViewController: UICollectionViewDataSource {
+extension AlbumViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // album.photos.count
         album.count
@@ -52,7 +52,7 @@ extension DetailsViewController: UICollectionViewDataSource {
 }
 
 // MARK: - CollectionView FlowLayout
-extension DetailsViewController: UICollectionViewDelegateFlowLayout {
+extension AlbumViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
         let height = view.frame.height
