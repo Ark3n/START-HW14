@@ -20,6 +20,7 @@ final class AlbumsViewController: UIViewController {
         collectionView.register(PeopleCell.self, forCellWithReuseIdentifier: PeopleCell.identifier)
         collectionView.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.identifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
     // MARK: - View LifeCycle
@@ -122,7 +123,6 @@ extension AlbumsViewController: UICollectionViewDataSource {
                 cell.configureCell(photo: album.photos, title: album.title, count: album.count)
                 return cell
             }
-            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GirdCell.identifier, for: indexPath) as? GirdCell else { return UICollectionViewCell()}
             cell.configureCell(photo: album.image, title: album.title, count: album.count)
             return cell
@@ -138,5 +138,16 @@ extension AlbumsViewController: UICollectionViewDataSource {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderCell.identifier, for: indexPath) as! HeaderCell
         header.configureHeader(title: title)
         return header
+    }
+}
+
+// MARK: - CollectionView DataSource
+extension AlbumsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photos = albums[indexPath.section].albums[indexPath.row].photos
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let detailVC = DetailsViewController()
+        detailVC.album = photos
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
