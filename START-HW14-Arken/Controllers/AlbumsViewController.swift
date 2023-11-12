@@ -17,6 +17,7 @@ final class AlbumsViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(GirdCell.self, forCellWithReuseIdentifier: GirdCell.identifier)
         collectionView.register(ListCell.self, forCellWithReuseIdentifier: ListCell.identifier)
+        collectionView.register(PeopleCell.self, forCellWithReuseIdentifier: PeopleCell.identifier)
         collectionView.register(HeaderCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.identifier)
         collectionView.dataSource = self
         return collectionView
@@ -116,6 +117,12 @@ extension AlbumsViewController: UICollectionViewDataSource {
         let album = albums[indexPath.section].albums[indexPath.row]
         switch indexPath.section {
         case 0, 1:
+            if indexPath == [1, 0] {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PeopleCell.identifier, for: indexPath) as? PeopleCell else { return UICollectionViewCell()}
+                cell.configureCell(photo: album.photos, title: album.title, count: album.count)
+                return cell
+            }
+            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GirdCell.identifier, for: indexPath) as? GirdCell else { return UICollectionViewCell()}
             cell.configureCell(photo: album.image, title: album.title, count: album.count)
             return cell

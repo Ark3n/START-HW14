@@ -14,14 +14,15 @@ final class HeaderCell: UICollectionReusableView {
     static let identifier = "header"
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
+        label.font = .boldSystemFont(ofSize: 22)
+        label.adjustsFontForContentSizeCategory = true
         label.textAlignment = .right
         return label
     }()
     
     private lazy var separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemGray4
         return view
     }()
     

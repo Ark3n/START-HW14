@@ -35,6 +35,7 @@ final class ListCell: UICollectionViewCell {
     private lazy var chevronImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(systemName: "chevron.right")
+        imageView.contentMode = .center
         imageView.tintColor = .systemGray
         return imageView
     }()
@@ -80,7 +81,7 @@ final class ListCell: UICollectionViewCell {
         }
         chevronImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.trailing.equalToSuperview().offset(-10)
+            make.trailing.equalToSuperview().offset(-10)            
         }
         
         seporatorView.snp.makeConstraints { make in
