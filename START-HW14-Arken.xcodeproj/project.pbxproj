@@ -21,6 +21,7 @@
 		D8CBE6122AFF8F100002D304 /* GirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6112AFF8F100002D304 /* GirdCell.swift */; };
 		D8CBE6342AFFCED50002D304 /* listCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6332AFFCED50002D304 /* listCell.swift */; };
 		D8CBE6372AFFDEB60002D304 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */; };
+		D8CBE6392B00B0EC0002D304 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D8CBE6112AFF8F100002D304 /* GirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirdCell.swift; sourceTree = "<group>"; };
 		D8CBE6332AFFCED50002D304 /* listCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listCell.swift; sourceTree = "<group>"; };
 		D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				D8CBE6112AFF8F100002D304 /* GirdCell.swift */,
 				D8CBE6332AFFCED50002D304 /* listCell.swift */,
 				D8CBE6362AFFDEB60002D304 /* HeaderCell.swift */,
+				D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				D819DB832AFAB77F0054F7D7 /* AppDelegate.swift in Sources */,
 				D8CBE5E32AFB7F7A0002D304 /* AlbumsViewController.swift in Sources */,
 				D819DB852AFAB77F0054F7D7 /* SceneDelegate.swift in Sources */,
+				D8CBE6392B00B0EC0002D304 /* PeopleCell.swift in Sources */,
 				D8CBE5E12AFB7F6E0002D304 /* ForYouViewController.swift in Sources */,
 				D8CBE6372AFFDEB60002D304 /* HeaderCell.swift in Sources */,
 				D8CBE5DF2AFB7F610002D304 /* LibaryViewController.swift in Sources */,

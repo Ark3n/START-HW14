@@ -7,16 +7,19 @@
 
 import UIKit
 
-struct Photo {
+struct Album {
     let image: String
     let title: String
-    let count: String
+    var count: String {
+        String(photos.count)
+    }
+    let photos: [String]
 }
 
 struct AlbumsGroup {
     let title: String
     let count: String
-    let albums: [Photo]
+    let albums: [Album]
 }
 
 extension AlbumsGroup {
@@ -25,35 +28,33 @@ extension AlbumsGroup {
     }
     static func getMyAlbumGroup() -> AlbumsGroup {
         let photos = [
-            Photo(image: "1", title: "Recents", count: "3500"),
-            Photo(image: "2", title: "WhatsApp Images", count: "56"),
-            Photo(image: "3", title: "WhatsApp", count: "350"),
-            Photo(image: "1", title: "Favorites", count: "100"),
-            Photo(image: "2", title: "WhatsApp Images", count: "56"),
-            Photo(image: "3", title: "WhatsApp", count: "350"),
-            Photo(image: "1", title: "Favorites", count: "100"),
-            Photo(image: "2", title: "Images", count: "3500"),
+            Album(image: "1", title: "Recents", photos: ["1", "2", "3", "4", "3", "4"]),
+            Album(image: "2", title: "WhatsApp Images", photos: ["1", "2", "3", "4", "1", "2", "3", "4"]),
+            Album(image: "3", title: "WhatsApp", photos: ["1", "2", "3", "4"]),
+            Album(image: "1", title: "Favorites", photos: ["1", "2", "3", "4"]),
+            Album(image: "2", title: "WhatsApp Images", photos: ["1", "2", "3", "4"]),
+            Album(image: "3", title: "WhatsApp", photos: ["1", "2", "3", "4"]),
+            Album(image: "1", title: "Favorites",photos: ["1", "2", "3", "4"]),
+            Album(image: "2", title: "Images", photos: ["1", "2", "3", "4"]),
         ]
         let count  = String(photos.count)
-        return AlbumsGroup(title: "myAlbum", count: count, albums: photos)
+        return AlbumsGroup(title: "My Albums", count: count, albums: photos)
     }
     
     static func getPeopleGroup() -> AlbumsGroup {
         let photos = [
-            Photo(image: "1", title: "People", count: "3500"),
-            Photo(image: "2", title: "Places", count: "56"),
-            Photo(image: "1", title: "People", count: "3500"),
-            Photo(image: "2", title: "Places", count: "56")
+            Album(image: "1", title: "People",  photos: ["1", "2", "3", "4", "1", "2", "3", "4"]),
+            Album(image: "2", title: "Places",  photos: ["1", "2", "3", "4"])
         ]
         let count  = String(photos.count)
-        return AlbumsGroup(title: "People&Places", count: count, albums: photos)
+        return AlbumsGroup(title: "People & Places", count: count, albums: photos)
     }
     
     static func getMediaTypes() -> AlbumsGroup {
         let mediaTypes = [
-            Photo(image: "video", title: "Videos", count: "145"),
-            Photo(image: "person.crop.rectangle", title: "Selfies", count: "234"),
-            Photo(image: "smallcircle.circle", title: "Live Photos", count: "123")
+            Album(image: "video", title: "Videos", photos: ["1", "2", "3", "4"]),
+            Album(image: "person.crop.rectangle", title: "Selfies", photos: ["1", "2", "3", "4"]),
+            Album(image: "smallcircle.circle", title: "Live Photos",  photos: ["1", "2", "3", "4"])
         ]
         let count = String(mediaTypes.count)
         return AlbumsGroup(title: "Media Types", count: count, albums: mediaTypes)
