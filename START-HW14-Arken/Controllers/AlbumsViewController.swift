@@ -61,7 +61,6 @@ final class AlbumsViewController: UIViewController {
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40))
                 let headerLayout = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 layouSection.boundarySupplementaryItems = [headerLayout]
-                
                 return layouSection
                 
             case 1:
@@ -70,7 +69,7 @@ final class AlbumsViewController: UIViewController {
                 layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.4), heightDimension: .fractionalWidth(0.5))
-                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: layoutItem, count: 1)
+                let layoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [layoutItem])
                 
                 let layouSection = NSCollectionLayoutSection(group: layoutGroup)
                 layouSection.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 0)
@@ -79,7 +78,6 @@ final class AlbumsViewController: UIViewController {
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40))
                 let headerLayout = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 layouSection.boundarySupplementaryItems = [headerLayout]
-                
                 return layouSection
                 
             default:
@@ -97,7 +95,6 @@ final class AlbumsViewController: UIViewController {
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(40))
                 let headerLayout = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
                 layouSection.boundarySupplementaryItems = [headerLayout]
-                
                 return layouSection
             }
         }

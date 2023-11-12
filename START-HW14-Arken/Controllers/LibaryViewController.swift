@@ -11,7 +11,7 @@ final class LibaryViewController: UIViewController {
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Lybary"
+        title = "Libary"
         view.backgroundColor = .systemBackground
     }
 }

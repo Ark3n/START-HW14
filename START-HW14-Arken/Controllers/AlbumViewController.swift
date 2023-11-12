@@ -55,7 +55,6 @@ extension AlbumViewController: UICollectionViewDataSource {
 extension AlbumViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
-        let height = view.frame.height
         return CGSize(width: width * 0.3, height: width * 0.3)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
