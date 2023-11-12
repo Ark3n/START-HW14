@@ -24,6 +24,7 @@
 		D8CBE6392B00B0EC0002D304 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */; };
 		D8CBE63B2B00DC6F0002D304 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE63A2B00DC6F0002D304 /* AlbumViewController.swift */; };
 		D8CBE63D2B00E0380002D304 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE63C2B00E0380002D304 /* DetailCell.swift */; };
+		D8CBE63F2B0135410002D304 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CBE63E2B0135410002D304 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		D8CBE6382B00B0EC0002D304 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		D8CBE63A2B00DC6F0002D304 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		D8CBE63C2B00E0380002D304 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		D8CBE63E2B0135410002D304 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				D8CBE5E22AFB7F7A0002D304 /* AlbumsViewController.swift */,
 				D8CBE5E42AFB7F850002D304 /* SearchViewController.swift */,
 				D8CBE63A2B00DC6F0002D304 /* AlbumViewController.swift */,
+				D8CBE63E2B0135410002D304 /* PhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				D8CBE63B2B00DC6F0002D304 /* AlbumViewController.swift in Sources */,
 				D8CBE63D2B00E0380002D304 /* DetailCell.swift in Sources */,
 				D8CBE5DF2AFB7F610002D304 /* LibaryViewController.swift in Sources */,
+				D8CBE63F2B0135410002D304 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

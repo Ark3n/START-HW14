@@ -68,3 +68,13 @@ extension AlbumViewController: UICollectionViewDelegateFlowLayout {
         return 3
     }
 }
+
+// MARK: - CollectionView FlowLayout
+extension AlbumViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = album[indexPath.row]
+        let vc = PhotoViewController()
+        vc.configureImageView(imageName: photo)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
