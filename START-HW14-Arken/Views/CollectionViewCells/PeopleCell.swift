@@ -112,14 +112,16 @@ final class PeopleCell: UICollectionViewCell {
         }
     }
     public func configureCell(photo: [String], title: String, count: String) {
-        firstPhotoView.image = UIImage(named: photo[0])
-        firstPhotoView.layer.cornerRadius = width/2
-        secondPhotoView.image = UIImage(named: photo[1])
-        secondPhotoView.layer.cornerRadius = width/2
-        thirdPhotoView.image = UIImage(named: photo[2])
-        thirdPhotoView.layer.cornerRadius = width/2
-        foursPhotoView.image = UIImage(named: photo[3])
-        foursPhotoView.layer.cornerRadius = width/2
+        if !photo.isEmpty && photo.count > 3 {
+            firstPhotoView.image = UIImage(named: photo[0])
+            firstPhotoView.layer.cornerRadius = width/2
+            secondPhotoView.image = UIImage(named: photo[1])
+            secondPhotoView.layer.cornerRadius = width/2
+            thirdPhotoView.image = UIImage(named: photo[2])
+            thirdPhotoView.layer.cornerRadius = width/2
+            foursPhotoView.image = UIImage(named: photo[3])
+            foursPhotoView.layer.cornerRadius = width/2
+        }
         titleLabel.text = title
         photoCountLabel.text = count
     }
